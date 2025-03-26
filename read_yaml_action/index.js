@@ -32,6 +32,7 @@ try {
     var terraform_st_storage_account = String(configYaml["variables"]["terraform_st_storage_account"]);
     var terraform_st_container_name = String(configYaml["variables"]["terraform_st_container_name"]);
     var terraform_st_key = String(configYaml["variables"]["terraform_st_key"]);
+    var azure_creds_secret = String(configYaml["variables"]["azure_creds_secret"]);
 
     if(checkGenerateEntity(terraform_st_location)){
       terraform_st_location = location;
@@ -69,6 +70,7 @@ try {
     core.setOutput("terraform_st_storage_account", terraform_st_storage_account);
     core.setOutput("terraform_st_container_name", terraform_st_container_name);
     core.setOutput("terraform_st_key", terraform_st_key);
+    core.setOutput("azure_creds_secret", azure_creds_secret);
   });
   
 } catch (error) {
