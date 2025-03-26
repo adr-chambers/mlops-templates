@@ -40,6 +40,8 @@ outputs:
     description: "Terraform State Container name"
   terraform_st_key:
     description: 'Terraform State Key'
+  azure_creds_secret:
+    description: 'The name of the Secret to retrieve Azure Credentials from'
 runs:
   using: 'node16'
   main: 'index.js'
